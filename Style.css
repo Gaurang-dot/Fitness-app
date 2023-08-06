@@ -1,0 +1,308 @@
+/* Basic styles and layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 8vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+span{
+  color: rgb(234, 229, 87);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.hero-section {
+  background-image: url("https://images.everydayhealth.com/images/everything-you-need-know-about-fitness-1440x810.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 200px 0;
+  color: #fff;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* ... (previous code) ... */
+
+/* Styling for the footer */
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Additional styles for links in the footer */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style links on hover */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ... (rest of the code) ... */
+
+
+/* Add responsive styles for different screen sizes */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+  }
+
+  .nav-links li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ... (previous code) ... */
+
+.section-diet, .section-workout {
+  padding: 50px;
+  background-color: #f0f0f0;
+}
+
+/* Add more specific styles for individual sections, e.g., font size, colors, etc. */
+
+/* ... (previous code) ... */
+
+/* Responsive styles for the navbar menu */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+  }
+
+  .nav-links li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  /* Responsive menu toggle button for smaller screens */
+  .menu-toggle {
+    display: block;
+    margin: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+  }
+
+  .show-nav {
+    display: flex; /* Show the nav links when the show-nav class is applied */
+  }
+}
+
+/* ... (previous code) ... */
+
+/* Additional styles for the Diet page */
+.section-diet {
+  padding: 20px;
+}
+
+.section-diet h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section-diet h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* ... (rest of the code) ... */
+
+
+/* ... (previous code) ... */
+
+/* Additional styles for the Workout page */
+.section-workout {
+  padding: 20px;
+}
+
+.section-workout h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.workout-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* ... (rest of the code) ... */
+
+/* Additional styles for the Blog page */
+.section-blog {
+  padding: 20px;
+}
+
+.section-blog h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.blog-post {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.blog-post h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  margin-bottom: 15px;
+}
+
+.blog-post a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.blog-post a:hover {
+  background-color: #555;
+}
+
+/* ... (rest of the code) ... */
+
+/* Additional styles for the About page */
+.section-about {
+  padding: 20px;
+}
+
+.section-about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* ... (rest of the code) ... */
+
+/* Additional styles for the Contact page */
+.section-contact {
+  padding: 20px;
+}
+
+.section-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* ... (rest of the code) ... */
