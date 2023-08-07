@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #ffebeb;
   color: #000000;
   padding: 10px 0;
 }
@@ -25,21 +25,45 @@ h1 {
 }
 
 span{
-  color: rgb(234, 229, 87);
+  color: rgb(0, 247, 255);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  font-size: 1.2rem;
 }
 
 .nav-links li {
+  position: relative;
   margin-left: 20px;
 }
 
 .nav-links li a {
   color: #000000;
   text-decoration: none;
+}
+
+.nav-links li a:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+}
+
+.nav-links li a:hover{
+  font-size: 1.3rem;
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+  background-color: #b44343;
 }
 
 .hero-section {
@@ -49,6 +73,7 @@ span{
   text-align: center;
   padding: 200px 0;
   color: #fff;
+  height: 45vh;
 }
 
 .hero-section h1 {
@@ -56,18 +81,39 @@ span{
   margin-bottom: 20px;
 }
 
-/* ... (previous code) ... */
+.section-diet, .section-workout {
+  padding: 50px;
+  background-color: #ffebeb;
+  /* color: white; */
+  height: 50vh;
+}
+
+.section-diet li{
+  font: bold;
+  margin: 10px;
+}
+
+.section-workout li{
+  font: bold;
+  margin: 10px;
+}
 
 /* Styling for the footer */
 footer {
-  background-color: #ffffff;
+  background-color:  #e6baba;
   color: #000000;
   text-align: center;
-  padding: 20px 0;
+  /* padding: 20px 0; */
+
 }
 
 footer p {
-  margin: 0;
+  /* margin: 0; */
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background-color: #000000;
+  color: white;
+  height: 46px;
 }
 
 /* Additional styles for links in the footer */
@@ -81,7 +127,55 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ... (rest of the code) ... */
+.social-media h2{
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.social-media a {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* ... (previous code) ... */
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 768px) {
+  .navbar {
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
 
 
 /* Add responsive styles for different screen sizes */
@@ -103,13 +197,6 @@ footer a:hover {
   .hero-section h1 {
     font-size: 2rem;
   }
-}
-
-/* ... (previous code) ... */
-
-.section-diet, .section-workout {
-  padding: 50px;
-  background-color: #f0f0f0;
 }
 
 /* Add more specific styles for individual sections, e.g., font size, colors, etc. */
@@ -153,34 +240,42 @@ footer a:hover {
   }
 }
 
-/* ... (previous code) ... */
-
 /* Additional styles for the Diet page */
-.section-diet {
+.main-section-diet {
   padding: 20px;
+  background-color: #ffebeb;
 }
 
-.section-diet h2 {
+.main-section-diet h1{
+  text-align: center;
+}
+
+.main-section-diet h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.section-diet h3 {
+.main-section-diet h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
-/* ... (rest of the code) ... */
-
-
-/* ... (previous code) ... */
-
-/* Additional styles for the Workout page */
-.section-workout {
-  padding: 20px;
+.main-section-diet li{
+  font-size: 1.3rem;
 }
 
-.section-workout h2 {
+
+/* Additional styles for the Workout page */
+.main-section-workout {
+  padding: 20px;
+  background-color: #ffebeb;
+}
+
+.main-section-workout h1{
+  text-align: center;
+}
+
+.main-section-workout h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -246,8 +341,11 @@ footer a:hover {
 /* ... (rest of the code) ... */
 
 /* Additional styles for the About page */
-.section-about {
+.main-section-about {
+  background-color:  #ffebeb;
   padding: 20px;
+  height: 100vh;
+  
 }
 
 .section-about h2 {
